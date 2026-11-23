@@ -1,0 +1,43 @@
+.proyectos-pequeños {
+    width: min(100% - 2rem, 72rem);
+    margin: 2rem auto;
+}
+
+.proyectos-pequeños-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.rectangulo-proyecto {
+    flex: 1;
+    min-height: 10rem;
+    padding: 1rem;
+    border: 2px solid orange;
+    border-radius: 0.5rem;
+    background-color: #818181;
+    box-shadow: 10px 10px 5px rgb(255, 255, 255);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rectangulo-proyecto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.65);
+}
+
+.proyectos-grandes {
+    width: min(100% - 2rem, 72rem);
+    margin: 2rem auto;
+}
+
+@media (max-width: 650px) {
+    .proyectos-pequeños-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .proyectos-pequeños-lista {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: #ffad33;
+}
+
+a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.contenedor {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+}
+
+.salto {
+    position: absolute;
+    z-index: 1;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #000000;
+    background-color: #ffffff;
+    transform: translateY(-150%);
+}
+
+.salto:focus {
+    transform: translateY(0);
+}
+
+.cabecera {
+    border-bottom: 1px solid #424242;
+    background-color: #111111;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 5rem;
+}
+
+.marca {
+    flex: 0 0 auto;
+    margin: 0;
+    color: #ffad33;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marca span {
+    color: #ffffff;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem 1.25rem;
+    border: 2px solid orange;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navegacion a {
+    text-decoration: none;
+}
+
+.hero {
+    padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.hero-contenido {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(15rem, 0.8fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+}
+
+.etiqueta {
+    color: #ffad33;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #ffad33;
+}
+
+.intro {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.imagen-hero {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    justify-self: center;
+    border-radius: 1rem;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.boton {
+    display: inline-block;
+    border: 2px solid orange;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    color: #000000;
+    background-color: #ffad33;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.boton.secundario {
+    color: #ffad33;
+    background-color: transparent;
+}
+
+#proyectos {
+    padding: 2rem 1rem;
+}
+
+#proyectos > h2,
+#proyectos > p {
+    max-width: 72rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+h2 {
+    margin-block: 0;
+    text-align: center;
+}
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 68rem;
+    margin: 2rem auto;
+    border: 3px solid orange;
+    border-radius: 0.5rem;
+    padding: clamp(1rem, 3vw, 2rem);
+    box-shadow: 0.5rem 0.5rem 0.3rem rgb(250 133 0 / 70%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proyectos:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgb(250 133 0 / 65%);
+}
+
+.imagen-proyecto {
+    width: min(100%, 25rem);
+    height: auto;
+    align-self: flex-end;
+    border-radius: 0.5rem;
+}
+
+.ver-todos {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contacto {
+    min-height: 60vh;
+    padding-block: clamp(3rem, 8vw, 6rem);
+    text-align: center;
+}
+
+.contacto h1 {
+    margin-bottom: 1rem;
+}
+
+.contacto p {
+    margin-block: 0.75rem;
+}
+
+.pie {
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #02680a;
+    text-align: center;
+}
+
+.pie p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .barra {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-block: 0.75rem;
+    }
+
+    .navegacion {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .hero-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-hero {
+        max-width: 24rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        width: min(100% - 1.25rem, 72rem);
+    }
+
+    .navegacion {
+        gap: 0.4rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+    #proyectos {
+        padding-inline: 0.625rem;
+    }
+
+    .proyectos {
+        margin-block: 1.5rem;
+    }
+}
