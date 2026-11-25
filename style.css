@@ -99,13 +99,6 @@ a:focus-visible {
     padding-block: clamp(3rem, 8vw, 6rem);
 }
 
-.hero-contenido {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(15rem, 0.8fr);
-    align-items: center;
-    gap: clamp(2rem, 6vw, 5rem);
-}
-
 .etiqueta {
     color: #ffad33;
     font-weight: bold;
@@ -129,7 +122,6 @@ h1 {
     width: 100%;
     max-width: 30rem;
     height: auto;
-    justify-self: center;
     border-radius: 1rem;
 }
 
@@ -240,10 +232,6 @@ h2 {
     .navegacion {
         justify-content: flex-start;
         width: 100%;
-    }
-
-    .hero-contenido {
-        grid-template-columns: 1fr;
     }
 
     .imagen-hero {

@@ -3,12 +3,6 @@
     margin: 2rem auto;
 }
 
-.proyectos-pequeños-lista {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-}
-
 .rectangulo-proyecto {
     flex: 1;
     min-height: 10rem;
@@ -28,16 +22,4 @@
 .proyectos-grandes {
     width: min(100% - 2rem, 72rem);
     margin: 2rem auto;
-}
-
-@media (max-width: 650px) {
-    .proyectos-pequeños-lista {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 420px) {
-    .proyectos-pequeños-lista {
-        grid-template-columns: 1fr;
-    }
 }
